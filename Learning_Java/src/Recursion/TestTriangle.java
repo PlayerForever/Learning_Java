@@ -5,6 +5,5 @@ public class TestTriangle {
 		System.out.println(Triangle.getNumber(2));
 		System.out.println(Triangle.getNumberByRecursion(2));
 	}
-	
-	
+
 }

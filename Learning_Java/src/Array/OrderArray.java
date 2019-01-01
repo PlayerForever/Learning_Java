@@ -1,21 +1,31 @@
 package Array;
 
-public class Array {
-	private long[] arr;
+public class OrderArray {
+private long[] arr;
 	
 	private int len;
 	
-	public Array() {
+	public OrderArray() {
 		arr = new long[50];
 	}
 	
 	
-	public Array(int maxsize) {
+	public OrderArray(int maxsize) {
 		arr = new long[maxsize];
 	}
 	
 	public void insert(long value) {
-		arr[len] = value;
+		int i;
+		for(i = 0; i < len; i++) {
+			if(arr[i] > value) {
+				break;
+			}
+		}
+		
+		for(int j = len; j > i; j --) {
+			arr[j] = arr[j - 1];
+		}
+		arr[i] = value;
 		len ++;
 	}
 	
@@ -38,6 +48,29 @@ public class Array {
 			return -1;
 		} else {
 			return i;
+		}
+	}
+	
+	
+	public int binarySearch(long value) {
+		int middle = 0; // index of the item in the middle
+		int low = 0; // index of the first item at the half array
+		int pow = len; // index of the last item at the half array
+		
+		while(true) {
+			middle = (pow + low) / 2;
+			if(arr[middle] == value) {
+				return middle;
+			} else if(low > pow) {
+				return -1;
+			} else {
+				if(arr[middle] > value) {
+					pow = middle - 1;
+					
+				} else {
+					low = middle + 1;
+				}
+			}
 		}
 	}
 	
@@ -69,8 +102,5 @@ public class Array {
 			arr[index] = newValue;
 		}
 	}
-	
-	
-	
 	
 }

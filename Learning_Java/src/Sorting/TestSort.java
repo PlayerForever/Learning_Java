@@ -29,8 +29,17 @@ public class TestSort {
 		}
 		System.out.println();
 		
+		
 		InsertSort.sort(arr); // insert sorting
 		System.out.print("Insert Sort: ");
+		for(long num : arr) {
+			System.out.print(num + " ");
+		}
+		System.out.println();
+		
+		
+		ShellSort.sort(arr); // shell sorting
+		System.out.print("Shell Sort: ");
 		for(long num : arr) {
 			System.out.print(num + " ");
 		}

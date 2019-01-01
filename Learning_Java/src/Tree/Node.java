@@ -1,14 +1,17 @@
 package Tree;
 
 public class Node { // node of binary tree
-	private long data;
+	public long data;
+	
+	public String sData;
 	 
-	private Node leftChild;
+	public Node leftChild;
 	
-	private Node rightChild;
+	public Node rightChild;
 	
-	public Node(long data) {
+	public Node(long data, String sData) {
 		this.data = data;
+		this.sData = sData;
 	}
 	
 }

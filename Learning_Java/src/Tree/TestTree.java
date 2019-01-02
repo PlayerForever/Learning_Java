@@ -28,6 +28,14 @@ public class TestTree {
 		tree.postOrder(tree.root);
 		System.out.println();
 		
+//		System.out.println(tree.delete(5));
+//		tree.postOrder(tree.root);
+//		System.out.println();
+//		
+		System.out.println(tree.delete(3));
+		tree.postOrder(tree.root);
+		System.out.println();
+		
 	}
 
 }

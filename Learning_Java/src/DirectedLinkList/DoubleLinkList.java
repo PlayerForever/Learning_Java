@@ -46,7 +46,7 @@ public class DoubleLinkList {
 			}
 			
 			public Node deleteLast() {
-				Node tmp = last;
+//				Node tmp = last;
 				if(first.next == null) {
 					first = null;
 				} else {

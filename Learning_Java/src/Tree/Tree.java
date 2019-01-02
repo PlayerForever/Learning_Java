@@ -60,5 +60,63 @@ public class Tree {
 	
 	public void delete(long value) {
 		
+		
 	}
+	
+	public void preOrder(Node localNode) { // pre-order traversal
+		if(localNode != null) {
+			System.out.println(localNode.data + ", " + localNode.sData);
+			preOrder(localNode.leftChild); // recursively read the leftChild
+			preOrder(localNode.rightChild);
+		}
+	}
+	
+	
+	
+	public void inOrder(Node localNode) {  // in-order traversal
+		if(localNode != null) {
+			inOrder(localNode.leftChild); // recursively read the leftChild
+			System.out.println(localNode.data + ", " + localNode.sData);
+			inOrder(localNode.rightChild);
+		}
+	}
+	
+	
+	public void postOrder(Node localNode) {  //post-order traversal
+		if(localNode != null) {
+			postOrder(localNode.leftChild); // recursively read the leftChild
+			postOrder(localNode.rightChild);
+			System.out.println(localNode.data + ", " + localNode.sData);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

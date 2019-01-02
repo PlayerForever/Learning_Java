@@ -8,6 +8,8 @@ public class TestTree {
 		tree.insert(20, "Hola");
 		tree.insert(15, "Hallo");
 		tree.insert(3, "Bonjur");
+		tree.insert(5, "World");
+		tree.insert(23, "Mundo");
 		
 		System.out.println(tree.root.data);
 		System.out.println(tree.root.rightChild.data);
@@ -15,6 +17,16 @@ public class TestTree {
 		System.out.println(tree.root.leftChild.data);
 
 		System.out.println(tree.find(15).data + " " + tree.find(15).sData);
+		
+		tree.preOrder(tree.root);
+		System.out.println();
+		
+	
+		tree.inOrder(tree.root);
+		System.out.println();
+		
+		tree.postOrder(tree.root);
+		System.out.println();
 		
 	}
 
